@@ -26,8 +26,17 @@ files="bash_profile bashrc bash_prompt aliases"
 echo "Affected files: $files"
 
 # copy and possilby overwrites current files
-for file in ${files}; do
-    cp -vi ${dotfiledir}/.${file} ${homedir}
+for file in ${files}; 
+do
+    #echo "cp ${dotfiledir}/.${file} ${homedir}"
+    if [ -e "$homedir.$file" ]; then
+        echo "Deprecated ${file} gets deleted"
+        rm -f $homedir.$file
+        cp -v $dotfiledir/.$file $homedir
+    else
+        echo "${file} gets copied into ${homedir}"
+        cp -v ${dotfiledir}/.${file} ${homedir}
+    fi
 done
 echo "installation complete"
 echo "#####################################################################"
