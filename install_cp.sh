@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
-############################
-# This script copies the files bash_profile, bashrc, bash_prompt and aliases into the home directory
-############################
 
 echo "#####################################################################"
 echo ""
@@ -30,7 +27,7 @@ echo "Affected files: $files"
 
 # copy and possilby overwrites current files
 for file in ${files}; do
-    cp -v ${dotfiledir}/.${file} ${homedir}
+    cp -vi ${dotfiledir}/.${file} ${homedir}
 done
 echo "installation complete"
 echo "#####################################################################"
