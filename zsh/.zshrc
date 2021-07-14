@@ -2,13 +2,14 @@
 export ZSH="$HOME/.oh-my-zsh"
 # export TERM="xterm-256color"
 
+DISABLE_AUTO_UPDATE=true
+DISABLE_UPDATE_PROMPT=true
+
 # Plugins
 plugins=(
     fast-syntax-highlighting
-    # ssh-agent
     zsh-autosuggestions
     zsh-completions
-    zsh-navigation-tools
 )
 
 # Theme
