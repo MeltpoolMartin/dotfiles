@@ -13,15 +13,10 @@ plugins=(
 )
 
 # Theme
-# ZSH_THEME="powerlevel10k/powerlevel10k"
-ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# if [[ $ZSH_THEME == "powerlevel10k/powerlevel10k" ]]; then
-#     [ -f ~/.config/shell/powerlevel2k.zsh ] && source ~/.config/shell/powerlevel2k.zsh
-# fi
-
-if [[ $TERM == "linux" ]]; then
-    ZSH_THEME="ys"
+if [[ $ZSH_THEME == "powerlevel10k/powerlevel10k" ]]; then
+    [ -f ~/.p10k.zsh ] && source ~/.p10k.zsh
 fi
 
 source $ZSH/oh-my-zsh.sh
