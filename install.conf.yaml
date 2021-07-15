@@ -8,7 +8,11 @@
     ~/.zshrc:
       path: zsh/.zshrc
       force: true
+    ~/.p10k.zsh:
+      path: zsh/.p10k.zsh
+      foce: true
     ~/.gitconfig:
+      if: '[ `uname` = Darwin ]'
       path: git/.gitconfig
 
 - shell:
