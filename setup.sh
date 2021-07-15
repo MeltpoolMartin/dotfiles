@@ -40,6 +40,7 @@ echo ""
 echo "##################################################"
 echo "Update dotfiles symlinks"
 [ -f "$HOME/.zshrc" ] && rm ~/.zshrc && echo "Removed ~/.zshrc"
+[ -f "$HOME/.zprofile" ] && rm ~/.zprofile && echo "Removed ~/.zprofile"
 [ -f "$HOME/.p10k.zsh" ] && rm ~/.p10k.zsh && echo "Removed ~/.p10k.zsh"
 ${SCRIPT_DIR}/install
 echo "##################################################"

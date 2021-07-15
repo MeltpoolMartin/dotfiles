@@ -21,5 +21,8 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 
+# .zprofile for SSH forwarding
+[ -f ~/.zprofile ] && source ~/.zprofile
+
 # Common aliases
 # [ -f ~/.config/shell/aliases.sh ] && source ~/.config/shell/aliases.sh

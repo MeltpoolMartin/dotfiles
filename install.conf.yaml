@@ -8,6 +8,9 @@
     ~/.zshrc:
       path: zsh/.zshrc
       force: true
+    ~/.zprofile:
+      path: zsh/.zprofile
+      force: true
     ~/.p10k.zsh:
       path: zsh/.p10k.zsh
       foce: true
