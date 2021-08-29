@@ -23,6 +23,7 @@ echo "Update dotfiles symlinks"
 [ -f "$HOME/.zshrc" ] && rm ~/.zshrc && echo "Removed ~/.zshrc"
 [ -f "$HOME/.zprofile" ] && rm ~/.zprofile && echo "Removed ~/.zprofile"
 [ -f "$HOME/.p10k.zsh" ] && rm ~/.p10k.zsh && echo "Removed ~/.p10k.zsh"
+[ -f "$HOME/.tmux.conf" ] && rm ~/.tmux.conf && echo "Removed ~/.tmux.conf"
 ${SCRIPT_DIR}/install
 echo "##################################################"
 echo "Setup complete"
