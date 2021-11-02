@@ -14,7 +14,7 @@ echo "Install oh-my-zsh plugins"
 [ ! -d "$HOME/.oh-my-zsh/custom/themes/powerlevel10k" ] && git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
 [ ! -d "$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions" ] && git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 [ ! -d "$HOME/.oh-my-zsh/custom/plugins/zsh-completions" ] && git clone https://github.com/zsh-users/zsh-completions.git ~/.oh-my-zsh/custom/plugins/zsh-completions
-[ ! -d "$HOME/.oh-my-zsh/custom/plugins/fast-syntax-highlighting" ] && git clone https://github.com/zdharma/fast-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting
+[ ! -d "$HOME/.oh-my-zsh/custom/plugins/fast-syntax-highlighting" ] && git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting
 echo "##################################################"
 echo ""
 
