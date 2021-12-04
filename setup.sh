@@ -23,6 +23,14 @@ echo "Install Tmux plugins"
 echo "##################################################"
 echo ""
 
+echo "Install FZF"
+if [ ! -d "$HOME/.fzf" ];then
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    ~/.fzf/install --all --no-update-rc
+fi
+echo "##################################################"
+echo ""
+
 echo "##################################################"
 echo "Update dotfiles symlinks"
 [ -f "$HOME/.zshrc" ] && rm ~/.zshrc && echo "Removed ~/.zshrc"

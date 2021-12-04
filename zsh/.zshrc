@@ -26,3 +26,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Common aliases
 # [ -f ~/.config/shell/aliases.sh ] && source ~/.config/shell/aliases.sh
+
+# Enable fuzzy search
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
