@@ -28,6 +28,5 @@
 	"remoteUser": "vscode",
 	"features": {
 		"git": "latest",
-		"python": "3.10"
 	}
 }
