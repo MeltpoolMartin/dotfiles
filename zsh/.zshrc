@@ -29,3 +29,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Enable fuzzy search
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+bindkey -s '^f' 'fzf-cd-widget\n'
+
+# git log --oneline --decorate --graph
+# git log --oneline --decorate --graph --all
