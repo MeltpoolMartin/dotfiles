@@ -27,10 +27,11 @@ source $ZSH/oh-my-zsh.sh
 # Common aliases
 # [ -f ~/.config/shell/aliases.sh ] && source ~/.config/shell/aliases.sh
 
-# Enable fuzzy search
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-bindkey -s '^f' 'fzf-cd-widget\n'
+# Enable fuzzy search and rebind key if it's OSX
+# https://stackoverflow.com/a/8597411
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh \
+    && [ "$OSTYPE" == "darwin"* ] \
+    && bindkey "ç" fzf-cd-widget
 
 # git log --oneline --decorate --graph
 # git log --oneline --decorate --graph --all
