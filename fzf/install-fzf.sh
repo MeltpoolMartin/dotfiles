@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 setup_fd() {
     command -v fd >/dev/null 2>&1
