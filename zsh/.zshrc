@@ -24,14 +24,6 @@ source $ZSH/oh-my-zsh.sh
 # .zprofile for SSH forwarding
 [ -f ~/.zprofile ] && source ~/.zprofile
 
-# Common aliases
-# [ -f ~/.config/shell/aliases.sh ] && source ~/.config/shell/aliases.sh
-
-# Enable fuzzy search and rebind key if it's OSX
-# https://stackoverflow.com/a/8597411
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh \
-    && [ "$OSTYPE" == "darwin"* ] \
-    && bindkey "ç" fzf-cd-widget
-
-# git log --oneline --decorate --graph
-# git log --oneline --decorate --graph --all
+# fuzzy finder
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.fzf.custom.sh ] && source ~/.fzf.custom.sh
