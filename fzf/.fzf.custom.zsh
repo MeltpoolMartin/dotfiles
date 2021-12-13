@@ -7,6 +7,8 @@ bindkey "\C-f" fzf-cd-widget
 setup_fd() {
     export PATH="~/.local/bin:$PATH"
     export FZF_DEFAULT_COMMAND="fd --type f --hidden --exclude .git"
+    export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+
     export FZF_ALT_C_COMMAND="fd --type d --hidden --exclude .git"
 }
 
