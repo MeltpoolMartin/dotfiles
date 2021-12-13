@@ -9,7 +9,7 @@ setup_fd() {
     export FZF_DEFAULT_COMMAND="fd --type f --hidden --exclude .git"
     export FZF_DEFAULT_OPTS='--height 40% --layout=reverse'
 
-    export FZF_CTRL_T_OPTS="--preview 'batcat --color=always --line-range :500 {}' \
+    export FZF_CTRL_T_OPTS="--preview 'bat --color=always --line-range :500 {}' \
       --bind shift-up:preview-page-up,shift-down:preview-page-down"
 
     export FZF_ALT_C_COMMAND="fd --type d --hidden --exclude .git"
