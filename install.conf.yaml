@@ -17,8 +17,8 @@
     ~/.tmux.conf:
       path: tmux/.tmux.conf
       force: true
-    ~/.fzf.custom.sh:
-      path: fzf/.fzf.custom.sh
+    ~/.fzf.custom.zsh:
+      path: fzf/.fzf.custom.zsh
       force: true
     ~/.gitconfig:
       if: '[ `uname` = Darwin ]'

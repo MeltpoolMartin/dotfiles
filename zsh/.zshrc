@@ -26,4 +26,4 @@ source $ZSH/oh-my-zsh.sh
 
 # fuzzy finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[ -f ~/.fzf.custom.sh ] && source ~/.fzf.custom.sh
+[ -f ~/.fzf.custom.zsh ] && source ~/.fzf.custom.zsh
