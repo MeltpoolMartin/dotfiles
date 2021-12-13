@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 # Customized settings for fzf
 
 # Rebind change dir widget to ctrl + f

@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
 
 setup_fd() {
-    command -v fd >/dev/null 2>&1
-    if [[ $? -ne "0" ]]; then
+    if command -v fd >/dev/null 2>&1; then
         # create symlink https://github.com/sharkdp/fd#on-ubuntu
         mkdir -p ~/.local/bin
-        ln -s $(which fdfind) ~/.local/bin/fd
+        ln -s "$(command -v fdfind)" ~/.local/bin/fd
     fi
 }
 

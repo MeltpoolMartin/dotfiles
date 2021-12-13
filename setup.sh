@@ -4,7 +4,7 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
-SCRIPT_DIR="$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 echo "##################################################"
 echo "Setup dotfiles"
@@ -38,7 +38,7 @@ echo "Update dotfiles symlinks"
 [ -f "$HOME/.zprofile" ] && rm ~/.zprofile && echo "Removed ~/.zprofile"
 [ -f "$HOME/.p10k.zsh" ] && rm ~/.p10k.zsh && echo "Removed ~/.p10k.zsh"
 [ -f "$HOME/.tmux.conf" ] && rm ~/.tmux.conf && echo "Removed ~/.tmux.conf"
-${SCRIPT_DIR}/install
+"${SCRIPT_DIR}"/install
 echo "##################################################"
 echo "Setup complete"
 
