@@ -7,9 +7,10 @@ bindkey "\C-f" fzf-cd-widget
 setup_fd() {
     export PATH="~/.local/bin:$PATH"
     export FZF_DEFAULT_COMMAND="fd --type f --hidden --exclude .git"
-    export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+    export FZF_DEFAULT_OPTS='--height 40% --layout=reverse'
 
     export FZF_ALT_C_COMMAND="fd --type d --hidden --exclude .git"
+    export FZF_ALT_C_OPTS="--preview 'tree -CL 2 {}'"
 }
 
 setup_find() {
@@ -28,7 +29,9 @@ fi
 
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-# GIT heart FZF
+# -----------------------------------------------------------------------------
+# git scripts with FZF
+# -----------------------------------------------------------------------------
 # https://gist.github.com/junegunn/8b572b8d4b5eddd8b85e5f4d40f17236
 
 is_in_git_repo() {
@@ -102,3 +105,7 @@ bind-git-helper() {
 }
 bind-git-helper f b t r h s
 unset -f bind-git-helper
+
+# -----------------------------------------------------------------------------
+# general scripts with FZF
+# -----------------------------------------------------------------------------

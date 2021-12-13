@@ -11,10 +11,10 @@ setup_fd() {
 # Install custom find tool fd
 if [[ "$OSTYPE" = "linux-gnu"* ]]; then
     sudo apt update \
-    && sudo apt install fd-find
+    && sudo apt install -y fd-find tree
     setup_fd
 elif [[ "$OSTYPE" = "darwin"* ]]; then
-    brew install fd
+    brew install fd tree
     setup_fd
 else
     echo "Unsuported OS: ${OSTYPE} - use find instead"
