@@ -4,7 +4,7 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
-SCRIPT_DIR="$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 echo "##################################################"
 echo "Setup dotfiles"
@@ -23,13 +23,22 @@ echo "Install Tmux plugins"
 echo "##################################################"
 echo ""
 
+echo "Install FZF"
+if [ ! -d "$HOME/.fzf" ];then
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    ~/.fzf/install --all --no-update-rc
+    ./fzf/install-fzf.sh
+fi
+echo "##################################################"
+echo ""
+
 echo "##################################################"
 echo "Update dotfiles symlinks"
 [ -f "$HOME/.zshrc" ] && rm ~/.zshrc && echo "Removed ~/.zshrc"
 [ -f "$HOME/.zprofile" ] && rm ~/.zprofile && echo "Removed ~/.zprofile"
 [ -f "$HOME/.p10k.zsh" ] && rm ~/.p10k.zsh && echo "Removed ~/.p10k.zsh"
 [ -f "$HOME/.tmux.conf" ] && rm ~/.tmux.conf && echo "Removed ~/.tmux.conf"
-${SCRIPT_DIR}/install
+"${SCRIPT_DIR}"/install
 echo "##################################################"
 echo "Setup complete"
 

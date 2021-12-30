@@ -24,5 +24,6 @@ source $ZSH/oh-my-zsh.sh
 # .zprofile for SSH forwarding
 [ -f ~/.zprofile ] && source ~/.zprofile
 
-# Common aliases
-# [ -f ~/.config/shell/aliases.sh ] && source ~/.config/shell/aliases.sh
+# fuzzy finder
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.fzf.custom.zsh ] && source ~/.fzf.custom.zsh
