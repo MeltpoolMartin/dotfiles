@@ -4,8 +4,9 @@
 # Rebind change dir widget to ctrl + f
 bindkey "\C-f" fzf-cd-widget
 
+export PATH="$HOME/.local/bin:$PATH"
+
 setup_fd() {
-    export PATH="~/.local/bin:$PATH"
     export FZF_DEFAULT_COMMAND="fd --type f --hidden --exclude .git"
     export FZF_DEFAULT_OPTS='--height 40% --layout=reverse'
 
