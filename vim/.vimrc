@@ -64,9 +64,6 @@ set relativenumber
  " show the mathing brackets
 set showmatch
 
- " highlight current line
- set cursorline
-
 """"""""""""""""""""""""""""""""""""
 " Status
 """"""""""""""""""""""""""""""""""""
